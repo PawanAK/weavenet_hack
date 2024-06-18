@@ -79,8 +79,8 @@ const ViewPost = () => {
             <h2 className="text-4xl font-bold mb-4 text-secondary">{postContent.Title}</h2>
             <p className="text-gray-700 mb-2">Author: {postContent.Author}</p>
             <p className="text-gray-700 mb-4">ID: {postContent.ID}</p>
-            <Link to="/view" className="text-white no-underline">
-              <button className="px-6 py-3 bg-blue-500 text-white rounded-full text-lg mb-4">Back</button>
+            <Link to="/view" className="text-white no-underline mb-4">
+              <button className="px-6 py-3 bg-blue-500 text-white rounded-full text-lg">Back</button>
             </Link>
             <ReactQuill value={postContent.Body} readOnly theme="bubble" className="w-full mb-4" style={{ minHeight: '300px' }} />
             <button className="flex items-center btn btn-primary mt-4 bg-primary text-white rounded-full px-6 py-3 hover:bg-primary-dark" onClick={likePost}>

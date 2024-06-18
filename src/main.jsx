@@ -8,6 +8,7 @@ import Home from "./pages/Home.jsx";
 import Create from "./pages/Create.jsx";
 import View from "./pages/View.jsx";
 import ViewPost from "./pages/ViewPost.jsx";
+import Profile from "./pages/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/create",
     element: <Create />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 

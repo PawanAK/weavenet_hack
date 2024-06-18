@@ -8,7 +8,7 @@ const View = () => {
   const { connected } = useConnection();
   const processId = "CB7fhKGaFWmkjj-IX7tXjfTwYaPBs0Q-SkLYtTzei9A";
   const [isFetching, setIsFetching] = useState(false);
-  const [postList, setPostList] = useState();
+  const [postList, setPostList] = useState([]);
 
   const syncAllPosts = async () => {
     if (!connected) {
@@ -22,11 +22,8 @@ const View = () => {
         tags: [{ name: "Action", value: "List" }],
         anchor: "1234",
       });
-      const filteredResult = result.Messages.map((message) => {
-        const parsedData = JSON.parse(message.Data);
-        return parsedData;
-      });
-      setPostList(filteredResult[0]);
+      const filteredResult = result.Messages.map((message) => JSON.parse(message.Data));
+      setPostList(filteredResult[0].reverse()); // Reverse the array to show the most recent posts first
     } catch (error) {
       console.log(error);
     }

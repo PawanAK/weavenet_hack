@@ -26,12 +26,7 @@ const Create = () => {
                 tags: [{ name: "Action", value: "AuthorList" }],
                 anchor: "1234",
             });
-            console.log("Dry run Author result", res);
-            const filteredResult = res.Messages.map((message) => {
-                const parsedData = JSON.parse(message.Data);
-                return parsedData;
-            });
-            console.log("Filtered Author result", filteredResult);
+            const filteredResult = res.Messages.map((message) => JSON.parse(message.Data));
             if (filteredResult[0]) {
                 setAuthorList(filteredResult[0]);
             }
@@ -48,14 +43,10 @@ const Create = () => {
             signer: createDataItemSigner(window.arweaveWallet),
         });
 
-        console.log("Register Author result", res);
-
         const registerResult = await result({
             process: processId,
             message: res,
         });
-
-        console.log("Registered successfully", registerResult);
 
         if (registerResult.Messages[0].Data === "Successfully Registered." || registerResult.Messages[0].Data === "Already Registered") {
             setIsRegistered(true);
@@ -80,6 +71,7 @@ const Create = () => {
             <Header />
             <main className="flex flex-col items-center justify-center w-full max-w-4xl p-4">
                 <h2 className="text-4xl font-bold mb-8 text-secondary">Create a Post</h2>
+                <p className="text-lg mb-4 text-accent">Create a new post and share your thoughts with the community.</p>
                 {isFetching && <div className="text-black">Fetching posts...</div>}
                 <hr className="border-t w-full my-4" />
                 {!isRegistered && (
