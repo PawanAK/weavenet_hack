@@ -10,8 +10,12 @@ const Home = () => {
       <main className="flex flex-col items-center justify-center w-full max-w-2xl p-4">
         <h2 className="text-4xl font-bold mb-8 text-secondary">Welcome to WeaveNet!</h2>
         <p className="text-lg mb-4 text-accent">Connect with your Arweave wallet to start creating and viewing posts.</p>
+        <p className="text-xl mb-6 text-primary">"Your decentralized social network on the blockchain!"</p>
         {connected ? (
-          <Link to="/view" className="px-6 py-3 bg-primary text-white rounded-full text-lg hover:bg-primary-dark">View Posts</Link>
+          <>
+            <Link to="/view" className="px-6 py-3 bg-primary text-white rounded-full text-lg hover:bg-primary-dark mb-4">View Posts</Link>
+            <Link to="/create" className="px-6 py-3 bg-secondary text-white rounded-full text-lg hover:bg-secondary-dark">Create Post</Link>
+          </>
         ) : (
           <ConnectButton />
         )}
