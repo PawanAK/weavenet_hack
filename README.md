@@ -2,6 +2,7 @@
 # WeaveNet: A Decentralized Social Media Revolution
 
 Backend code [link](https://ide.betteridea.dev/import?id=CB7fhKGaFWmkjj-IX7tXjfTwYaPBs0Q-SkLYtTzei9A)
+Demo [link](https://youtu.be/Ih3z_Q5zyNA)
 
 Tired of centralized platforms controlling your social media experience? WeaveNet brings transparency and permanence back to social networking with a revolutionary decentralized social media system.
 
@@ -21,3 +22,4 @@ WeaveNet leverages Arweave AO technology to create a tamper-proof and censorship
 
 ## Join the WeaveNet Movement!
 Be a part of the future of social networking. Download WeaveNet today and experience the power of a decentralized and transparent system.
+
