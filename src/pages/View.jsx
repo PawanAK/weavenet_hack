@@ -39,22 +39,20 @@ const View = () => {
   }, [connected]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-16">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background pt-16">
       <Header />
       <main className="flex flex-col items-center justify-center w-full max-w-2xl p-4">
-        <h2 className="text-4xl font-bold mb-8 text-black">
-          Welcome to the View Page
-        </h2>
+        <h2 className="text-4xl font-bold mb-8 text-secondary">Welcome to the View Page</h2>
         {isFetching && <div className="text-black">Fetching posts...</div>}
         <hr className="border-t w-full my-4" />
         {postList &&
           postList.map((post, index) => (
             <div
               key={index}
-              className="p-4 border border-gray-300 rounded mb-4 w-full"
+              className="p-4 border border-border rounded mb-4 w-full bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <a href={`/view/${post.ID}`} className="text-black no-underline">
-                <h3 className="text-2xl font-bold">{post.Title}</h3>
+                <h3 className="text-2xl font-bold text-secondary">{post.Title}</h3>
                 <p className="text-gray-700">Author: {post.Author}</p>
                 <p className="text-gray-700">Likes: {post.Likes}</p>
                 <p className="text-gray-700">Comments: {post.Comments}</p>

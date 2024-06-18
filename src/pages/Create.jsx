@@ -76,10 +76,10 @@ const Create = () => {
     }, [authorList, activeAddress]);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-white pt-16">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-background pt-16">
             <Header />
             <main className="flex flex-col items-center justify-center w-full max-w-4xl p-4">
-                <h2 className="text-4xl font-bold mb-8 text-black">Create a Post</h2>
+                <h2 className="text-4xl font-bold mb-8 text-secondary">Create a Post</h2>
                 {isFetching && <div className="text-black">Fetching posts...</div>}
                 <hr className="border-t w-full my-4" />
                 {!isRegistered && (
@@ -90,9 +90,9 @@ const Create = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
-                            className="mb-4 w-full border-2 border-gray-300 rounded p-2"
+                            className="mb-4 w-full border-2 border-border rounded p-2"
                         />
-                        <button className="px-6 py-3 bg-blue-500 text-white rounded-full text-lg mb-4" onClick={registerAuthor}>Register</button>
+                        <button className="px-6 py-3 bg-primary text-white rounded-full text-lg mb-4 shadow-md hover:bg-primary-dark hover:shadow-lg transition duration-300" onClick={registerAuthor}>Register</button>
                     </div>
                 )}
                 {isRegistered && <Editor />}
