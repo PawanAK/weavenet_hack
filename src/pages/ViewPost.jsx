@@ -82,7 +82,6 @@ const ViewPost = () => {
             <Link to="/view" className="text-white no-underline">
               <button className="px-6 py-3 bg-blue-500 text-white rounded-full text-lg mb-4">Back</button>
             </Link>
-            <hr className="border-t w-full my-4" />
             <ReactQuill value={postContent.Body} readOnly theme="bubble" className="w-full mb-4" style={{ minHeight: '300px' }} />
             <button className="flex items-center btn btn-primary mt-4 bg-primary text-white rounded-full px-6 py-3 hover:bg-primary-dark" onClick={likePost}>
               <FaHeart className="mr-2" /> {postContent.Likes}
