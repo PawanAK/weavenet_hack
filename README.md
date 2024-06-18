@@ -1,4 +1,4 @@
-[![protocol.land](https://arweave.net/eZp8gOeR8Yl_cyH9jJToaCrt2He1PHr0pR4o-mHbEcY)](https://protocol.land/#/repository/FIOxtEVncJ0My6XySwoNj25aTQofUIM-hCGNAy3uHVc)
+[![protocol.land](https://arweave.net/eZp8gOeR8Yl_cyH9jJToaCrt2He1PHr0pR4o-mHbEcY)](https://protocol.land/#/repository/e96f749e-ecbb-416a-b084-d485bf0af9f6)
 # WeaveNet: A Decentralized Social Media Revolution
 
 Backend code [link](https://ide.betteridea.dev/import?id=CB7fhKGaFWmkjj-IX7tXjfTwYaPBs0Q-SkLYtTzei9A)
